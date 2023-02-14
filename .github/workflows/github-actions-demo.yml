@@ -18,7 +18,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Extract tag name
-        run: echo "🔖 The tag name is ${{ github.ref }}."
+      - name: Afficher le nom du tag
+        run: echo "Numéro de version  $(basename $GITHUB_REF)"
         env: 
           GITHUB_REF: ${{ github.ref }}
